@@ -1,0 +1,80 @@
+* {
+    border-radius: 0;
+    font-family: "Source Code Pro";
+    font-size: 20px;
+    min-height: 0;
+    background-color: #121212;    
+}
+
+
+
+window#waybar {
+    background-color: #121212;
+    color: white;
+}
+
+
+
+tooltip {
+  background: rgba(43, 48, 59, 0.5);
+}
+tooltip label {
+  color: white;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    background: transparent;
+    color: white;
+    border-bottom: 2px solid gray;
+    
+}
+
+#workspaces button.focused {
+    background: #121212;    
+    border-bottom-color: #8ab4f8;
+}
+#mode, #clock, #battery, #network {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#mode {
+    background: #121212;
+}
+
+#clock {
+    background-color: #121212;
+}
+
+#battery {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+#battery.charging {
+    color: white;
+    background-color: #121212;
+}
+#network{
+	font-size:18px;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
