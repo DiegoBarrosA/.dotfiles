@@ -21,7 +21,8 @@ programs.sway = {
     swaylock
     swayidle
     wl-clipboard
-    mako # notification daemon
+    clipman
+    mako 
     kitty
     imv
     wofi

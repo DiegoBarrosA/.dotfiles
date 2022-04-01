@@ -18,7 +18,7 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi --show drun
+set $menu wofi --show drun -p "Search"
 
 ###Output configuration
 
@@ -56,7 +56,7 @@ input * {
         gaps inner 4
 #######Applications
 #######gtk
-exec_always /home/tsuneko/.dotfiles/sway/theming.sh 
+exec_always /home/tsuneko/Dotfiles_Kuro/sway/scripts/theming.sh 
 seat seat0 xcursor_theme phinger-cursors-light 32
 set $cl_high #5294e2
 set $cl_indi #d9d8d8
@@ -80,11 +80,13 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
     #Launcher
     bindsym $mod+space exec $menu
+
+    bindsym $mod+c exec clipman pick -t wofi
     #Direct launch applications
     bindsym $mod+f exec firefox 
     bindsym $mod+e exec pcmanfm
     bindsym $mod+d exec neovide
-    bindsym $mod+s exec swaylock & systemctl suspend
+    bindsym $mod+x exec /home/tsuneko/Dotfiles_Kuro/sway/scripts/wofi-power.sh
 
 
    floating_modifier $mod normal
@@ -168,9 +170,9 @@ workspace $ws2 output DP-1
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+z layout stacking
-    bindsym $mod+x layout tabbed
-    bindsym $mod+c layout toggle split
+    bindsym $mod+i layout stacking
+    bindsym $mod+o layout tabbed
+    bindsym $mod+p layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+m fullscreen
@@ -228,5 +230,7 @@ exec waybar
 exec_always mako
 exec_always udiskie
 exec systemctl --user import-environment
+exec wl-paste -t text --watch clipman store
+exec wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json"
 include @sysconfdir@/sway/config.d/*
 
