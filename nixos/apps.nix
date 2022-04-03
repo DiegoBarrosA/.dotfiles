@@ -5,7 +5,7 @@ config = {
      environment.systemPackages = with pkgs;  [
      mpv
      firefox-wayland
-     gimp
+     krita
      shotwell
      transmission-gtk 
      keepassxc   
@@ -16,7 +16,8 @@ config = {
      spotify
      neovide 
      joplin-desktop
-     nicotine-plus
+     qbittorrent
+     onlyoffice-bin
    ];
 
 

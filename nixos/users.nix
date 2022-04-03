@@ -2,7 +2,7 @@
 {
   users.users.tsuneko = {
      isNormalUser = true;
-     extraGroups = [ "wheel" "video" "networkmanager" "camera" ]; 
+     extraGroups = [ "input" "wheel" "video" "networkmanager" "camera" ]; 
      shell = pkgs.zsh;     
 };
 programs.zsh = {

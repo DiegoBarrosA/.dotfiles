@@ -11,9 +11,6 @@ xdg = {
     gtkUsePortal = true;
   };
 };
-
-
-
 programs.sway = { 
  enable = true;
   wrapperFeatures.gtk = true; 
@@ -31,6 +28,7 @@ programs.sway = {
     gsettings-desktop-schemas
     gtk-engine-murrine
     gtk_engines
+    libsForQt5.qtstyleplugin-kvantum
     lxappearance-gtk2
     udiskie
     xdg-user-dirs
@@ -38,6 +36,7 @@ programs.sway = {
     materia-theme 
     phinger-cursors
     pavucontrol
+    libinput-gestures
   ];
 };
 security.rtkit.enable = true;

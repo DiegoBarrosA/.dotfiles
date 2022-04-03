@@ -20,6 +20,14 @@ set $term kitty
 # on the original workspace that the command was run on.
 set $menu wofi --show drun -p "Search"
 
+###Output configuration
+
+output HDMI-A-1 resolution 1920x1080 position 0,0
+output DP-1 resolution 1440x900 transform 90 position 1920,415
+output HDMI-A-1 bg  /home/tsuneko/Pictures/computerRelated/takiKuroPapers/petraLandscapeMonitor.jpg fill
+output DP-1 bg /home/tsuneko/Pictures/computerRelated/takiKuroPapers/petraPortraitMonitor.jpg fill
+
+
 
 ### Idle configuration
 #
@@ -30,9 +38,15 @@ set $menu wofi --show drun -p "Search"
 #          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
 #          before-sleep 'swaylock -f -c 000000'
 #
-
+# This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
+
+##Input devices
+input * {
+    xkb_layout "latam"
+}
+
 ##Look and feel
 ########Window managing
         default_border pixel 2
@@ -42,7 +56,7 @@ set $menu wofi --show drun -p "Search"
         gaps inner 4
 #######Applications
 #######gtk
-exec_always /home/tsuneko/.dotfiles/sway/scripts/theming.sh 
+exec_always /home/tsuneko/Dotfiles_Kuro/sway/scripts/theming.sh 
 seat seat0 xcursor_theme phinger-cursors-light 32
 set $cl_high #5294e2
 set $cl_indi #d9d8d8
@@ -144,6 +158,9 @@ bindsym $mod+Shift+8    move container to workspace $ws8
 bindsym $mod+Shift+9    move container to workspace $ws9
 bindsym $mod+Shift+0    move container to workspace $ws0
 
+workspace $ws1 output HDMI-A-1
+workspace $ws2 output DP-1
+
 # Layout stuff:
 #
     # You can "split" the current object of your focus with
@@ -215,7 +232,5 @@ exec_always udiskie
 exec systemctl --user import-environment
 exec wl-paste -t text --watch clipman store
 exec wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json"
-##Include configs
 include @sysconfdir@/sway/config.d/*
-#include ~/.dotfiles/sway/conf.d/configKuro
-include ~/.dotfiles/sway/config.d/configMura
+
