@@ -18,5 +18,6 @@ services = {
     flatpak.enable = true;
   };
 programs.gphoto2.enable = true;
- }
+  hardware.bluetooth.enable = true;
+}
 

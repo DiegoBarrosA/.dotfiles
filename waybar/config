@@ -3,13 +3,14 @@
     "position": "bottom",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["network","pulseaudio", "clock"],
+    "modules-right": ["network","pulseaudio","battery", "clock"],
     "sway/window": {
         "max-length": 50
     },
     "battery": {
-        "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", ""],
+    	"tooltip-format": "%{capacity}, {time}",
     },
     "clock": {
         "format": " {:%H:%M}"
@@ -31,9 +32,9 @@
     "on-click": "pavucontrol"
 },
 "network": {
-    "interface": "enp6s0",
+    "interface": "wlp1s0",
     "format": "{ifname}",
-    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-wifi": "",
     "format-ethernet": "  ",
     "format-disconnected": "", //An empty format will hide the module.
     "tooltip-format": "{ifname} via {gwaddr} ",

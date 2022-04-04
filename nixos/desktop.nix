@@ -37,6 +37,10 @@ programs.sway = {
     phinger-cursors
     pavucontrol
     libinput-gestures
+    grim
+    slurp
+    bluez
+    bluez-tools
   ];
 };
 security.rtkit.enable = true;
