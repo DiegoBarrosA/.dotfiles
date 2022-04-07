@@ -14,7 +14,7 @@ programs.zsh = {
     cp = "cp -i";
     mv = "mv -i";
     rr = "curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash";
-
+    
 
     update = "sudo nixos-rebuild switch";
   };

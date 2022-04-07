@@ -25,7 +25,9 @@
         };
         customRC = ''
          set number
-        '';
+         nnoremap <C-n> :NERDTree<CR> 
+
+         '';
       }; 
     }
   )
