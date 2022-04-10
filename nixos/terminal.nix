@@ -2,21 +2,19 @@
 
 {
     
-  config = { 
- nixpkgs.overlays = [ (    self: super:
+config = { 
+nixpkgs.overlays = [ (    self: super:
 {
   ncmpcpp = super.ncmpcpp.override {
     visualizerSupport = true;
     clockSupport = true;
   };
 })];
-
   programs.tmux.enable = true;
   programs.adb.enable = true;
   users.users.tsuneko.extraGroups = ["adbusers"];
   environment.systemPackages = with pkgs; [
-    (
-      neovim.override {
+( neovim.override {
       vimAlias = true;
       configure = {
                packages.myPlugins = with pkgs.vimPlugins; {
@@ -32,6 +30,8 @@
     }
   )
      
+     du-dust     
+     gnumake
      exa
      zoxide
      gping
@@ -56,6 +56,10 @@
      brightnessctl
      ncmpcpp
      pulseaudio
+     android-tools
+     cmake
+     wget
+     xdg-user-dirs
    ];
     programs.neovim.enable = true;
     programs.neovim.viAlias = true;
