@@ -13,6 +13,8 @@ config = {
      joplin-desktop
      libreoffice-fresh
      mullvad-vpn
+     brave
+     zathura
    ];
 
 

@@ -42,10 +42,12 @@ nixpkgs.overlays = [ (    self: super:
      pv
      git
      jq
+     wireguard-tools
      openssl
      imagemagick
      brlaser
      ghostscript
+     nixops
      python3
      fdupes
      zip
