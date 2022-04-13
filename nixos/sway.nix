@@ -19,6 +19,7 @@ programs.sway = {
        swaylock
        swayidle
      ##Info
+       eww-wayland
        waybar
        mako 
      ##Clipboard & Screenshots

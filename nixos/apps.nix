@@ -2,7 +2,8 @@
 {
 config = {
   nixpkgs.config.allowUnfree = true;
-     environment.systemPackages = with pkgs;  [
+
+  environment.systemPackages = with pkgs;  [
      librewolf-wayland
      shotwell
      transmission-gtk 
@@ -12,12 +13,11 @@ config = {
      neovide 
      joplin-desktop
      libreoffice-fresh
-     mullvad-vpn
      brave
      zathura
+  
    ];
 
 
  };
-
 }
