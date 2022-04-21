@@ -13,9 +13,9 @@ config = {
      neovide 
      joplin-desktop
      libreoffice-fresh
-     brave
      zathura
-  
+     gimp 
+     vivaldi
    ];
 
 

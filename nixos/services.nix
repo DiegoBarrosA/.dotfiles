@@ -7,9 +7,9 @@ services = {
         dataDir = "/home/tsuneko/Syncthing";
         configDir = "/home/tsuneko/.config/syncthing";  
 };
+
     printing.enable = true;
     openssh.enable = true;
-    onedrive.enable = true;
     gvfs.enable = true;
     udisks2.enable = true;
     devmon.enable = true;

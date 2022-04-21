@@ -8,7 +8,7 @@ case $selected in
   logout)
     swaymsg exit;;
   suspend)
-    exec systemctl suspend;;
+    /home/tsuneko/.dotfiles/sway/scripts/lock.sh & exec systemctl suspend;;
   reboot)
     exec systemctl reboot;;
   shutdown)

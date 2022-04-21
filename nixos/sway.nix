@@ -1,7 +1,7 @@
 { config, pkgs, ...}:
 {
-config = {
-xdg = {
+  config = {
+        xdg = {
   portal = {
     enable = true;
     extraPortals = with pkgs; [
@@ -10,11 +10,21 @@ xdg = {
     ];
   };
 };
+
 programs.sway = { 
  enable = true;
   wrapperFeatures.gtk = true; 
   extraPackages = with pkgs; [
-    #Core
+
+##Acceleration
+  rocm-opencl-icd
+  amdvlk
+  driversi686Linux.amdvlk
+
+
+
+
+  #Core
      ##Session management
        swaylock
        swayidle
@@ -72,12 +82,12 @@ hardware.pulseaudio.enable = false;
 
 environment.pathsToLink = [ "/libexec" ];
   fonts.fonts = with pkgs; [
-    noto-fonts-cjk
+    iosevka-bin
+    sarasa-gothic
     noto-fonts-emoji 
-    source-code-pro 
     font-awesome
   ];
-   };
- }
+};
+}
 
 

@@ -12,7 +12,7 @@ configuration{ show-icons: true;
 /* } */
 
 *{
-    font-family: Source Code Pro;
+    font-family: Iosevka;
 }
 
 #window {
@@ -41,7 +41,7 @@ configuration{ show-icons: true;
     padding:10px;
     background-color: #121212;
     border: 2px solid #5294e2;
-    border-radius: 25px;
+    border-radius: 10px;
 }
 
 #scroll {

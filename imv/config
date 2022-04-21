@@ -1,0 +1,5 @@
+[options]
+background = 121212
+[binds]
+n = next
+p = prev

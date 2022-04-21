@@ -52,12 +52,7 @@ environment.systemPackages = with pkgs; [
 	tap-plugins
 	lsp-plugins
 	FIL-plugins
-	##VST
-	oxefmsynth
 
-	surge-XT
-	surge
-	
 	##utilities
 	ardour
 	carla

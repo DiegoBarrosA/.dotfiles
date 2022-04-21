@@ -1,18 +1,10 @@
 { config, pkgs, ...}:
+{
+    imports = [
+    ./gitpkgs.nix
 
-{
-    
-config = { 
-nixpkgs.overlays = [ (    self: super:
-{
-  ncmpcpp = super.ncmpcpp.override {
-    visualizerSupport = true;
-    clockSupport = true;
-  };
-})];
-  programs.tmux.enable = true;
-  programs.adb.enable = true;
-  users.users.tsuneko.extraGroups = ["adbusers"];
+  ];
+config = {
   environment.systemPackages = with pkgs; [
 ( neovim.override {
       vimAlias = true;
@@ -25,11 +17,14 @@ nixpkgs.overlays = [ (    self: super:
          set number
          nnoremap <C-n> :NERDTree<CR> 
 
-         '';
+syntax enable
+
+
+        '';
       }; 
     }
   )
-     
+     clinfo     
      du-dust     
      gnumake
      exa
@@ -63,6 +58,24 @@ nixpkgs.overlays = [ (    self: super:
      wget
      xdg-user-dirs
    ];
+nixpkgs.overlays = [ (    self: super:
+{
+  ncmpcpp = super.ncmpcpp.override {
+    visualizerSupport = true;
+    clockSupport = true;
+  };
+})];
+programs.tmux = {
+  enable = true;
+  clock24 = true;
+  extraConfig = ''
+    unbind-key C-b
+    set-option -g prefix C-Space
+    bind-key C-Space send-prefix
+  '';
+};
+ programs.adb.enable = true;
+  users.users.tsuneko.extraGroups = ["adbusers"];
     programs.neovim.enable = true;
     programs.neovim.viAlias = true;
     programs.neovim.vimAlias = true;
@@ -96,5 +109,6 @@ systemd.services.mpd.environment = {
 };
 
 
-}
 
+
+}
