@@ -5,6 +5,7 @@
   ];
 config = {
   environment.systemPackages = with pkgs; [
+     nvimpager
      du-dust     
      gnumake
      exa

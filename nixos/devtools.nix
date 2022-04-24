@@ -2,10 +2,9 @@
 {
   config = {
     environment.systemPackages = with pkgs;[
-    neovide
-    ripgrep
-    fd
-
+    nodejs 
+    nodePackages.browser-sync
+    nodePackages.prettier
 
     ];
   };

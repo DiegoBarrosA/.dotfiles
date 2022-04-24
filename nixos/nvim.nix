@@ -14,12 +14,20 @@ environment.systemPackages =  with pkgs; [
                 set termguicolors 
             autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 	 
-		let ayucolor="dark"
-		colorscheme ayu
-        '';
+		colorscheme catppuccin
+		let g:ale_fixers = {
+		\   'javascript': ['prettier'],
+		\   'css': ['prettier'],                             
+		\    'markdown': ['prettier'],
+		\    'yaml': ['prettier'],
+     		\    'html': ['prettier'], 
+      \}
+
+		let g:ale_linters_explicit = 1
+'';
         packages.myVimPackage = with pkgs.vimPlugins; {
           # see examples below how to use custom packages
-          start = [ nerdtree YouCompleteMe lightline-vim ayu-vim];
+          start = [ nerdtree YouCompleteMe lightline-vim catppuccin-nvim ale indentLine coc-nvim coc-emmet];
           opt = [ ];
         }; 
       };     
