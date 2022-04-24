@@ -83,9 +83,9 @@ hardware.pulseaudio.enable = false;
 environment.pathsToLink = [ "/libexec" ];
   fonts.fonts = with pkgs; [
     iosevka-bin
-    sarasa-gothic
     noto-fonts-emoji 
     font-awesome
+    sarasa-gothic
   ];
 };
 }

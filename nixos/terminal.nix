@@ -1,30 +1,10 @@
 { config, pkgs, ...}:
 {
     imports = [
-    ./gitpkgs.nix
-
+               ./nvim.nix
   ];
 config = {
   environment.systemPackages = with pkgs; [
-( neovim.override {
-      vimAlias = true;
-      configure = {
-               packages.myPlugins = with pkgs.vimPlugins; {
-          start = [ nerdtree vim-nix ]; 
-          opt = [];
-        };
-        customRC = ''
-         set number
-         nnoremap <C-n> :NERDTree<CR> 
-
-syntax enable
-
-
-        '';
-      }; 
-    }
-  )
-     clinfo     
      du-dust     
      gnumake
      exa
@@ -57,6 +37,8 @@ syntax enable
      cmake
      wget
      xdg-user-dirs
+     yt-dlp
+     ffmpeg_5
    ];
 nixpkgs.overlays = [ (    self: super:
 {
@@ -76,11 +58,7 @@ programs.tmux = {
 };
  programs.adb.enable = true;
   users.users.tsuneko.extraGroups = ["adbusers"];
-    programs.neovim.enable = true;
-    programs.neovim.viAlias = true;
-    programs.neovim.vimAlias = true;
-    environment.variables = { EDITOR = "vim"; };
-services.mpd = {
+    services.mpd = {
   enable = true;
   musicDirectory = "/home/tsuneko/Music";
   extraConfig = ''

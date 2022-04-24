@@ -15,8 +15,8 @@ config = {
      libreoffice-fresh
      zathura
      gimp 
-     vivaldi
-   ];
+     openrgb
+        ];
 
 
  };

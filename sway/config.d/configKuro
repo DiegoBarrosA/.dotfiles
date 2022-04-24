@@ -10,7 +10,7 @@ workspace $ws10 output HDMI-A-1
 
 ##Input devices
 input * {
-    xkb_layout "latam"
+	    xkb_layout "us"
 }
 
 

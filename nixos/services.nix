@@ -14,8 +14,12 @@ services = {
     udisks2.enable = true;
     devmon.enable = true;
     flatpak.enable = true;
-};
+    udev.packages = [ pkgs.qmk-udev-rules ]; 
+
+  };
     programs.gphoto2.enable = true;
     hardware.bluetooth.enable = true;
-}
+  
+
+  }
 
