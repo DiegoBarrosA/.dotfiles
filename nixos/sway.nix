@@ -87,7 +87,8 @@ environment.pathsToLink = [ "/libexec" ];
     noto-fonts-emoji 
     font-awesome
     sarasa-gothic
-  ];
+    source-han-mono 
+    ];
 };
 }
 
