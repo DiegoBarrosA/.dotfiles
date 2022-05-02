@@ -14,8 +14,8 @@ programs.zsh = {
     cp = "cp -i";
     mv = "mv -i";
     rr = "curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash";
-    
-
+    serve = "browser-sync start --server --files .";    
+    moe= "mpv https://listen.moe/stream";
     update = "sudo nixos-rebuild switch";
   };
   ohMyZsh = {

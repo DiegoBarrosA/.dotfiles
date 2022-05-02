@@ -24,6 +24,7 @@ environment.systemPackages =  with pkgs; [
       \}
 
 		let g:ale_linters_explicit = 1
+		let g:ale_fix_on_save = 1
 '';
         packages.myVimPackage = with pkgs.vimPlugins; {
           # see examples below how to use custom packages

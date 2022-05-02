@@ -72,7 +72,7 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
     #Direct launch applications
     bindsym $mod+f exec librewolf 
     bindsym $mod+e exec pcmanfm
-    bindsym $mod+d exec neovide
+    bindsym $mod+d exec emacs 
     bindsym $mod+x exec /home/tsuneko/.dotfiles/sway/scripts/wofi-power.sh
     bindsym $mod+z exec /home/tsuneko/.dotfiles/sway/scripts/lock.sh
 # Volume
@@ -223,5 +223,5 @@ exec wl-paste -t text --watch clipman store
 exec wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json"
 ##Include configs
 include @sysconfdir@/sway/config.d/*
-#include ~/.dotfiles/sway/config.d/configKuro
-include ~/.dotfiles/sway/config.d/configMura
+include ~/.dotfiles/sway/config.d/configKuro
+#include ~/.dotfiles/sway/config.d/configMura

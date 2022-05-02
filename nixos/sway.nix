@@ -55,8 +55,7 @@ programs.sway = {
        libsForQt5.qtstyleplugin-kvantum
        lxappearance-gtk2
      ###themes
-	whitesur-icon-theme
-	papirus-icon-theme
+        papirus-icon-theme
         materia-theme 
         phinger-cursors
      ##Device Management

@@ -16,7 +16,11 @@ config = {
      zathura
      gimp 
      openrgb
-        ];
+     nicotine-plus
+     chromium
+     ventoy-bin
+];
+
 
 
  };

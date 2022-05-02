@@ -58,6 +58,7 @@ environment.systemPackages = with pkgs; [
 	carla
 	audacity
 	helvum
+	hydrogen
 ];
 };
 }
