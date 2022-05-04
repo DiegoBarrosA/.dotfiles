@@ -5,7 +5,6 @@
     nodejs 
     nodePackages.browser-sync
     nodePackages.prettier
-    emacs
     ripgrep
     fd
     ];

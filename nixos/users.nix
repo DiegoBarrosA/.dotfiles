@@ -3,9 +3,9 @@
   users.users.tsuneko = {
      isNormalUser = true;
      extraGroups = [ "input" "wheel" "video" "networkmanager" "camera" ]; 
-     shell = pkgs.zsh;     
+     shell = pkgs.fish;     
 };
-programs.zsh = {
+programs.fish = {
   enable = true;
   shellAliases = {
     ls = "exa -al --color=always --group-directories-first";
@@ -18,11 +18,6 @@ programs.zsh = {
     moe= "mpv https://listen.moe/stream";
     update = "sudo nixos-rebuild switch";
   };
-  ohMyZsh = {
-    enable = true;
-    
-    theme = "norm";
   };
-};
-
 }
+
