@@ -5,7 +5,8 @@ services = {
         enable = true;
         user = "tsuneko";
         dataDir = "/home/tsuneko/Syncthing";
-        configDir = "/home/tsuneko/.config/syncthing";  
+       configDir = "/home/tsuneko/.config/syncthing"; 
+
 };
 
     printing.enable = true;
@@ -13,8 +14,6 @@ services = {
     gvfs.enable = true;
     udisks2.enable = true;
     devmon.enable = true;
-    flatpak.enable = true;
-    udev.packages = [ pkgs.qmk-udev-rules ]; 
 
   };
     programs.gphoto2.enable = true;

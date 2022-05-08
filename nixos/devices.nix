@@ -7,7 +7,8 @@ config = {
       libimobiledevice
       ifuse 
       exfatprogs
-    ];
+      ntfs3g
+];
   programs.adb.enable = true;  
   services.usbmuxd.enable = true;
 };

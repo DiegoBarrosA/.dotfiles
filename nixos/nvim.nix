@@ -1,7 +1,6 @@
 { pkgs, config, ... }:
 {
 
- 
 config = {
 environment.systemPackages =  with pkgs; [
         ( neovim.override {
@@ -14,7 +13,6 @@ environment.systemPackages =  with pkgs; [
                 set termguicolors 
             autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 	 
-		colorscheme catppuccin
 		let g:ale_fixers = {
 		\   'javascript': ['prettier'],
 		\   'css': ['prettier'],                             
@@ -28,7 +26,7 @@ environment.systemPackages =  with pkgs; [
 '';
         packages.myVimPackage = with pkgs.vimPlugins; {
           # see examples below how to use custom packages
-          start = [ nerdtree YouCompleteMe lightline-vim catppuccin-nvim ale indentLine coc-nvim coc-emmet];
+          start = [ nerdtree YouCompleteMe lightline-vim ale indentLine coc-nvim coc-emmet];
           opt = [ ];
         }; 
       };     

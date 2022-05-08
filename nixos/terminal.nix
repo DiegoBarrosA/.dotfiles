@@ -5,9 +5,9 @@
   ];
 config = {
   environment.systemPackages = with pkgs; [
-     nvimpager
+     cmatrix
+     pipes-rs
      du-dust     
-     gnumake
      exa
      zoxide
      gping
@@ -18,7 +18,6 @@ config = {
      pv
      git
      jq
-     wireguard-tools
      openssl
      imagemagick
      brlaser
@@ -39,8 +38,9 @@ config = {
      wget
      xdg-user-dirs
      yt-dlp
-     ffmpeg_5
-   ];
+ffmpeg
+
+];
 nixpkgs.overlays = [ (    self: super:
 {
   ncmpcpp = super.ncmpcpp.override {
@@ -48,15 +48,6 @@ nixpkgs.overlays = [ (    self: super:
     clockSupport = true;
   };
 })];
-programs.tmux = {
-  enable = true;
-  clock24 = true;
-  extraConfig = ''
-    unbind-key C-b
-    set-option -g prefix C-Space
-    bind-key C-Space send-prefix
-  '';
-};
  programs.adb.enable = true;
   users.users.tsuneko.extraGroups = ["adbusers"];
     services.mpd = {

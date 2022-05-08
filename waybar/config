@@ -1,10 +1,10 @@
 [{    "modules-left": ["sway/workspaces", "sway/mode"],
     "layer": "top",
-    "position": "top",
+    "position": "bottom",
     "output": "HDMI-A-1",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["battery","clock#date","clock"],
+    "modules-right": ["pulseaudio","network","clock#date","clock"],
     "sway/window": {
         "max-length": 50
     },
@@ -21,16 +21,6 @@
     "clock#date":{  
    	"format": "{:%A %d, %B %Y}",
    },
-
-
-},
-{
-    "layer": "top",
-    "position": "right",
-    "spacing": 5,
-    "output": "DP-1",
-        "modules-left": ["sway/workspaces"],
-	"modules-right": ["network", "pulseaudio"],
 "network": {
 
     "interface": "wg0",
@@ -60,6 +50,8 @@
     "scroll-step": 1,
     "on-click": "pavucontrol"
 },
+
+
 },
 {
     "layer": "top",

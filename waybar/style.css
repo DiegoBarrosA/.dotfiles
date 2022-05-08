@@ -1,6 +1,6 @@
 * {
   border-radius: 0;
-  font-family: "Iosevka, Source Han Mono ";
+  font-family: "Iosevka, Source Han Mono";
   font-size: 20px;
   min-height: 0px;
   min-width: 25px;
@@ -19,7 +19,6 @@ window.eDP-1 > box {
   margin-left: 2px;
 }
 
-
 window#waybar {
   background-color: transparent;
   color: white;
@@ -27,8 +26,8 @@ window#waybar {
 window > box {
   margin-left: 2px;
   margin-right: 2px;
-  margin-top: 2px;
-  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 2px;
   background-color: #121212;
 }
 
@@ -46,7 +45,7 @@ tooltip label {
 }
 
 #workspaces button.focused {
-  background-color: #efbc37;
+  background-color: #5294e2;
   color: #272727;
 }
 #mode,

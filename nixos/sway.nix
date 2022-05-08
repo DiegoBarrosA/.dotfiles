@@ -11,11 +11,28 @@
   };
 };
 
+
+services.greetd = { 
+	enable = true;
+	package = pkgs.greetd.tuigreet ;
+	restart = true;
+	settings = {
+
+  default_session = {
+    command = "${pkgs.greetd.tuigreet}/bin/tuigreet --remember   --remember-session --time -w 200 -g 'Welcome back (´• ω •`)ﾉ' --cmd sway";
+    user = "greeter";
+
+  };
+		};
+		vt = 1;
+
+};
+
 programs.sway = { 
  enable = true;
   wrapperFeatures.gtk = true; 
   extraPackages = with pkgs; [
-
+firefox-wayland
 ##Acceleration
   rocm-opencl-icd
   amdvlk
@@ -23,13 +40,14 @@ programs.sway = {
 
 
 
+##Greeter
+	greetd.wlgreet
 
   #Core
      ##Session management
        swaylock
        swayidle
      ##Info
-       eww-wayland
        waybar
        mako 
      ##Clipboard & Screenshots
@@ -57,8 +75,8 @@ programs.sway = {
      ###themes
         papirus-icon-theme
         materia-theme 
-        phinger-cursors
-     ##Device Management
+        capitaine-cursors
+ ##Device Management
        udiskie
        bluez
        bluez-tools
@@ -82,12 +100,12 @@ hardware.pulseaudio.enable = false;
 
 environment.pathsToLink = [ "/libexec" ];
   fonts.fonts = with pkgs; [
-    iosevka-bin
+    iosevka
     noto-fonts-emoji 
     font-awesome
-    sarasa-gothic
-    source-han-mono 
-    ];
+    source-han-mono
+
+ ];
 };
 }
 

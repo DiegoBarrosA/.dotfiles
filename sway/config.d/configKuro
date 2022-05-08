@@ -1,12 +1,7 @@
 ###Output configuration
 
-output HDMI-A-1 resolution 1920x1080 position 0,0
-output DP-1 resolution 1440x900 transform 90 position 1920,415
-output HDMI-A-1 bg  /home/tsuneko/Pictures/wallpaperGeneral/jbloor_kyoto.jpg fill
-output DP-1 bg /home/tsuneko/Pictures/wallpaperGeneral/jbloor_kyoto.jpg fill
-workspace $ws1 output HDMI-A-1
-workspace $ws2 output DP-1
-workspace $ws10 output HDMI-A-1
+output HDMI-A-1 resolution 2560x1080 position 0,0
+output HDMI-A-1 bg  /home/tsuneko/Pictures/Landscape/ultrawide/asiaStreet.jpg fill
 
 ##Input devices
 input * {
