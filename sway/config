@@ -234,4 +234,4 @@ exec emacs --daemon
 ##Include configs
 include @sysconfdir@/sway/config.d/*
 #include ~/.dotfiles/sway/config.d/configKuro
-include ~/.dotfiles/sway/config.d/configMura
+#include ~/.dotfiles/sway/config.d/configMura

@@ -20,9 +20,8 @@ boot = {
 		   enable = true;
 		   device = "nodev";
 		   efiSupport = true;
-		   timeout = 0;
 		   };
-
+timeout = 0;
 		   efi.efiSysMountPoint = "/boot"; 
 }; 
 	kernelPackages = pkgs.linuxPackages_zen;
@@ -48,5 +47,4 @@ boot = {
   console.keyMap = "us";
    # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-   system.stateVersion = "21.11"; # Did you read the comment?
 }

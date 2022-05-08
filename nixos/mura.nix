@@ -18,9 +18,9 @@ boot = {
 		   enable = true;
 		   device = "nodev";
 		   efiSupport = true;
-		   timeout = 0;
 		   };
 
+		   timeout = 0;
 		   efi.efiSysMountPoint = "/boot"; 
 }; 
 	kernelPackages = pkgs.linuxPackages_zen;
