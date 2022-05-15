@@ -233,5 +233,5 @@ exec wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/cli
 exec emacs --daemon
 ##Include configs
 include @sysconfdir@/sway/config.d/*
-#include ~/.dotfiles/sway/config.d/configKuro
+include ~/.dotfiles/sway/config.d/configKuro
 #include ~/.dotfiles/sway/config.d/configMura

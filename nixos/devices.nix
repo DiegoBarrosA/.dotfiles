@@ -1,15 +1,14 @@
-{ config, pkgs, ... }:
-{
-config = {
-      environment.systemPackages = with pkgs;  [
+{ config, pkgs, ... }: {
+  config = {
+    environment.systemPackages = with pkgs; [
       android-file-transfer
       sshfs
       libimobiledevice
-      ifuse 
+      ifuse
       exfatprogs
       ntfs3g
-];
-  programs.adb.enable = true;  
-  services.usbmuxd.enable = true;
-};
+    ];
+    programs.adb.enable = true;
+    services.usbmuxd.enable = true;
+  };
 }

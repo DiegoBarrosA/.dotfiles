@@ -1,13 +1,12 @@
-{ config, pkgs, ... }:
-{
-services = {
-     syncthing = {
-        enable = true;
-        user = "tsuneko";
-        dataDir = "/home/tsuneko/Syncthing";
-       configDir = "/home/tsuneko/.config/syncthing"; 
+{ config, pkgs, ... }: {
+  services = {
+    syncthing = {
+      enable = true;
+      user = "tsuneko";
+      dataDir = "/home/tsuneko/Syncthing";
+      configDir = "/home/tsuneko/.config/syncthing";
 
-};
+    };
 
     printing.enable = true;
     openssh.enable = true;
@@ -16,9 +15,8 @@ services = {
     devmon.enable = true;
 
   };
-    programs.gphoto2.enable = true;
-    hardware.bluetooth.enable = true;
-  
+  programs.gphoto2.enable = true;
+  hardware.bluetooth.enable = true;
 
-  }
+}
 
