@@ -35,7 +35,7 @@
         greetd.wlgreet
         #Core
         ##Session management
-        swaylock
+        swaylock-effects
         swayidle
         ##Info
         waybar

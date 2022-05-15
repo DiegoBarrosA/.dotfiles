@@ -1,11 +1,19 @@
 #!/bin/sh
 # Times the screen off and puts it to background
 # Locks the screen immediately
-swaylock -i $HOME/.dotfiles/sway/resources/lock.jpg --indicator-y-position 980 --indicator-x-position 100 --key-hl-color 00ff6f --ring-clear-color ff3000 --font Iosevka \
---font-size 14  --inside-clear-color ff300050 --inside-color ffffff00 \
---layout-bg-color 121212 --ring-color 121212 -r \
---indicator-radius 35 --indicator-thickness 10 \
---ring-ver-color 006fff 
+swaylock --indicator-y-position 540  --indicator-x-position 1280 \
+ -S --effect-blur 5x5 --fade-in 1  \
+ --clock --indicator \
+ --datestr '%d %B %Y' \
+--key-hl-color 06ff70 --ring-clear-color ff0000 --font Iosevka \
+--ring-color 00000070 \
+--font-size 50  --inside-clear-color ff0000 --inside-color 12121270 \
+--text-color ffffffff \
+--ring-color 12121200  \
+--indicator-idle-visible \
+--indicator-radius 150 --indicator-thickness 10  -r \
+--separator-color 12121200 \
+--ring-ver-color 006fff --inside-ver-color 006fff  
 # Kills last background task so idle timer doesn't keep running
 kill %%
 

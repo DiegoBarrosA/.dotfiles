@@ -41,7 +41,7 @@ configuration{ show-icons: true;
     padding:10px;
     background-color: #121212;
     border: 2px solid #5294e2;
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 #scroll {
