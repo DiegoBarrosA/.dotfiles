@@ -7,7 +7,7 @@
     ];
 
     programs.steam.enable = true;
-    environment.systemPackages = with pkgs; [ lutris polymc ];
+    environment.systemPackages = with pkgs; [ lutris polymc minetest ];
   };
 
 }

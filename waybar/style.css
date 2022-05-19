@@ -1,11 +1,15 @@
 * {
   border-radius: 0;
-  font-family: "Iosevka, Source Han Mono";
+  font-family: "Source Sans, Source Han Mono";
   font-size: 20px;
   min-height: 0px;
   min-width: 25px;
 }
 
+#language{
+color:#ff7373;
+
+}
 window.DP-1 > box {
   margin-top: 2px;
   margin-bottom: 2px;
@@ -51,6 +55,7 @@ tooltip label {
 #mode,
 #clock,
 #battery,
+#language,
 #network {
   padding-left: 10px;
   padding-right: 10px;

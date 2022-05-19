@@ -90,9 +90,13 @@
     environment.pathsToLink = [ "/libexec" ];
     fonts.fonts = with pkgs; [
       iosevka
+      sarasa-gothic
+      source-sans
+      source-han-sans
+      source-serif
+      source-han-mono
       noto-fonts-emoji
       font-awesome
-      source-han-mono
 
     ];
   };

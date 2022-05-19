@@ -9,6 +9,7 @@
               		syntax on
               		set number
               		set smartindent
+			colorscheme onedark
                           map <C-n> :NERDTreeToggle<CR>
                               set termguicolors 
                           autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -32,8 +33,7 @@
                 lightline-vim
                 ale
                 indentLine
-                coc-nvim
-                coc-emmet
+		onedark-vim
               ];
               opt = [ ];
             };

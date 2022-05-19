@@ -1,8 +1,9 @@
 { config, pkgs, ... }: {
-  imports = [ ./nvim.nix ];
   config = {
     environment.systemPackages = with pkgs; [
       cmatrix
+      mpc_cli
+      libnotify
       pipes-rs
       du-dust
       exa

@@ -16,7 +16,7 @@
         "curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash";
       serve = "browser-sync start --server --files .";
       moe = "mpv https://listen.moe/stream";
-      update = "sudo nixos-rebuild switch";
+      update = "sudo nixos-rebuild switch && notify-send  'Update completed!🐧🎉'";
     };
   };
 }

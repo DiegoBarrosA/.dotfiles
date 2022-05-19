@@ -2,9 +2,8 @@
     "layer": "top",
     "position": "bottom",
     "output": "HDMI-A-1",
-    "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio","network","clock#date","clock"],
+    "modules-right": ["pulseaudio","network","sway/language","clock#date","clock"],
     "sway/window": {
         "max-length": 50
     },
@@ -21,6 +20,14 @@
     "clock#date":{  
    	"format": "{:%A %d, %B %Y}",
    },
+   "sway/language": {
+    "format": "{}",
+    "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+},
+
+"sway/language": {
+    "format": " {short} {variant}",
+},
 "network": {
 
     "interface": "wg0",

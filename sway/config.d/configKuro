@@ -1,11 +1,10 @@
 ###Output configuration
-
-output HDMI-A-1 resolution 2560x1080 position 0,0
+output HDMI-A-1 resolution 2560x1080@60Hz position 0,0 subpixel rgb 
 output HDMI-A-1 bg  /home/tsuneko/Pictures/Landscape/ultrawide/asiaStreet.jpg fill
 
 ##Input devices
 input * {
-	    xkb_layout "us"
+ xkb_layout us,latam
+    xkb_options grp:alt_shift_toggle
 }
-
 

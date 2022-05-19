@@ -11,6 +11,7 @@
     ./terminal.nix
     ./users.nix
     ./environment.nix
+    ./nvim.nix
   ];
   boot = {
     loader = {
