@@ -46,8 +46,8 @@
 
   /* Theme Colour Suggestions
      *                              Dark        Light   */
-  --window-colour: #121212; /* #FAFAFC; */
-  --secondary-colour: #272727; /* #EAEAEC; */
+  --window-colour: #242424; /* #FAFAFC; */
+  --secondary-colour: #363636; /* #EAEAEC; */
   --inverted-colour: #fafafc; /* #1E2021; */
 
   /* Containter Tab Colours */
@@ -207,12 +207,12 @@ window,
   filter: grayscale(1) !important;
 }
 */
-/* remove window control buttons */
+/* remove window control buttons 
 .titlebar-buttonbox-container {
   display: none !important;
 }
 
-/* remove "padding" left and right from tabs */
+ remove "padding" left and right from tabs */
 .titlebar-spacer {
   display: none !important;
 }
