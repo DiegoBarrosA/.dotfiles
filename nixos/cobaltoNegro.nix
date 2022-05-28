@@ -2,9 +2,7 @@
 
   imports = [
     ./apps.nix
-    #./sway.nix
     ./gnome.nix
-    #./kde.nix
     ./devices.nix
     ./gaming.nix
     ./hosts.nix
@@ -18,7 +16,6 @@
     ./codium.nix
   ];
   boot = {
-    kernel.sysctl = { "kernel.printk" = "3 3 3 3"; };
     initrd.verbose = false;
     consoleLogLevel = 3;
     kernelModules =
@@ -41,6 +38,8 @@
       "loglevel=3"
       "vt.global_cursor_default=0"
       "boot.shell_on_fail"
+      "rd.systemd.show_status=false"
+      "rd.udev.log_level=3"
     ];
   };
   networking.hostName = "cobalto-negro";

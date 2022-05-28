@@ -15,7 +15,7 @@
       mv = "mv -i";
       moe = "mpv https://listen.moe/stream";
       update =
-        "sudo nixos-rebuild switch && notify-send  'Update completed!🐧🎉'";
+        "sudo nixos-rebuild switch --upgrade && notify-send  'Update completed!🐧🎉'";
     };
   };
 }

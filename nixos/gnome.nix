@@ -9,6 +9,7 @@
     gnome-secrets
     fragments
     monoid
+    clapper
 
   ];
 
