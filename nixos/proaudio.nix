@@ -55,9 +55,8 @@
       ##utilities
       ardour
       carla
-      audacity
-      helvum
       hydrogen
+      tenacity
     ];
   };
 }

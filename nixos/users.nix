@@ -1,8 +1,9 @@
 { config, pkgs, ... }: {
-  users.users.tsuneko = {
+  users.users.diego = {
     isNormalUser = true;
     extraGroups = [ "input" "wheel" "video" "networkmanager" "camera" ];
     shell = pkgs.fish;
+    description = "Diego Barros";
   };
   programs.fish = {
     enable = true;
@@ -12,11 +13,9 @@
       rn = "ranger";
       cp = "cp -i";
       mv = "mv -i";
-      rr =
-        "curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash";
-      serve = "browser-sync start --server --files .";
       moe = "mpv https://listen.moe/stream";
-      update = "sudo nixos-rebuild switch && notify-send  'Update completed!🐧🎉'";
+      update =
+        "sudo nixos-rebuild switch && notify-send  'Update completed!🐧🎉'";
     };
   };
 }

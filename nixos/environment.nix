@@ -2,14 +2,11 @@
   # environment.etc = {
   #  "resolv.conf".text = "OpenNIC  216.238.104.56\n";
   #};
-
+environment.sessionVariables.NIXOS_OZONE_WL = "1";
   environment.variables = {
     # This will become a global environment variable
     "EDITOR" = "vim";
-    "QT_STYLE_OVERRIDE" = "kvantum";
-    "_JAVA_AWT_WM_NONREPARENTING" = "1";
     "MOZ_ENABLE_WAYLAND" = "1";
-    "XDG_CURRENT_DESKTOP" = "sway";
     "DSSI_PATH" =
       "$HOME/.dssi:$HOME/.nix-profile/lib/dssi:/run/current-system/sw/lib/dssi";
     "LADSPA_PATH" =
@@ -25,6 +22,5 @@
     "RANGER_LOAD_DEFAULT_RC" = "false";
     "OCL_ICD_VENDORS" =
       " `nix-build '<nixpkgs>' --no-out-link -A rocm-opencl-icd`/etc/OpenCL/vendors/";
-
   };
 }

@@ -1,9 +1,10 @@
-{ config, pkgs, ... }: {
+{ config, pkgs,lib, ... }: {
   config = {
     environment.systemPackages = with pkgs; [
       cmatrix
       mpc_cli
       libnotify
+      spotdl
       pipes-rs
       du-dust
       exa
@@ -12,7 +13,7 @@
       procs
       neofetch
       btop
-      nixfmt 
+      nixfmt
       pv
       git
       jq
@@ -25,9 +26,9 @@
       fdupes
       zip
       unzip
-      unrar
       slurp
-      ranger
+      #ranger
+      fff
       cava
       brightnessctl
       ncmpcpp
@@ -40,6 +41,9 @@
       ffmpeg
 
     ];
+    nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+      "unrar"
+    ];
     nixpkgs.overlays = [
       (self: super: {
         ncmpcpp = super.ncmpcpp.override {
@@ -49,10 +53,10 @@
       })
     ];
     programs.adb.enable = true;
-    users.users.tsuneko.extraGroups = [ "adbusers" ];
+    users.users.diego.extraGroups = [ "adbusers" ];
     services.mpd = {
       enable = true;
-      musicDirectory = "/home/tsuneko/Music";
+      musicDirectory = "/home/diego/Music";
       extraConfig = ''
           audio_output {
            type "pipewire"
@@ -72,7 +76,7 @@
       #  startWhenNeeded = true; # systemd feature: only start MPD service upon connection to its socket
     };
 
-    services.mpd.user = "tsuneko";
+    services.mpd.user = "diego";
     systemd.services.mpd.environment = {
       # https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/609
       XDG_RUNTIME_DIR =
