@@ -6,7 +6,7 @@
     ./devices.nix
     ./gaming.nix
     ./hosts.nix
-    #  ./proaudio.nix
+    ./proaudio.nix
     ./services.nix
     ./terminal.nix
     ./users.nix

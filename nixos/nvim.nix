@@ -15,11 +15,7 @@
                                         autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
                             	 
                             		let g:ale_fixers = {
-                            		\   'javascript': ['prettier'],
-                            		\   'css': ['prettier'],                             
-                            		\    'markdown': ['prettier'],
-                            		\    'yaml': ['prettier'],
-                                 		\    'html': ['prettier'], 
+                                 		\    'html': ['html-beautify'], 
                                   \}
 
                             		let g:ale_linters_explicit = 1

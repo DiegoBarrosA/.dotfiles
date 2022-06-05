@@ -27,8 +27,7 @@
       zip
       unzip
       slurp
-      #ranger
-      fff
+      ranger
       cava
       brightnessctl
       ncmpcpp

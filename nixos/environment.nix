@@ -22,5 +22,6 @@ environment.sessionVariables.NIXOS_OZONE_WL = "1";
     "RANGER_LOAD_DEFAULT_RC" = "false";
     "OCL_ICD_VENDORS" =
       " `nix-build '<nixpkgs>' --no-out-link -A rocm-opencl-icd`/etc/OpenCL/vendors/";
+    "NIXOS_OZONE_WL" = "1";
   };
 }

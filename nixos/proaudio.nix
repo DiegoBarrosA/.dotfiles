@@ -54,6 +54,8 @@
 
       ##utilities
       ardour
+      zrythm
+      breeze-icons
       carla
       hydrogen
       tenacity

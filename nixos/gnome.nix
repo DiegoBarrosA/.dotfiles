@@ -4,12 +4,14 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.displayManager.gdm.wayland = true;
   environment.systemPackages = with pkgs; [
-    firefox
+    librewolf-wayland
     gnome.gnome-tweaks
     gnome-secrets
     fragments
     monoid
     clapper
+###Extensions
+    gnomeExtensions.blur-my-shell
 
   ];
 
@@ -24,6 +26,7 @@
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
     gnome-tour
+    gnome-console
     epiphany
     gnome.geary
     gnome.totem
@@ -32,5 +35,6 @@
     gnome.gnome-maps
     gnome.simple-scan
     gnome.yelp
+    
   ]);
 }
